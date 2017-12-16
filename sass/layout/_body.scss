@@ -1,0 +1,11 @@
+// Body layout overrides
+
+.topic-body {
+  margin: 0 0 3em;
+}
+
+main.main-container {
+  @include mobile_only {
+    padding: 0 15px;
+  }
+}

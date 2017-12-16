@@ -1,0 +1,32 @@
+core: 8.x
+type: theme
+base theme: wxt_bootstrap
+
+name: CDS
+description: CDS sub-theme leveraging Bootstrap WxT .
+package: 'WxT'
+
+regions:
+  homepagebean: 'Homepage Text'
+  breadcrumb: 'Breadcrumbs'
+  language_toggle: 'Language Toggle'
+  banner: 'Banner'
+  bannerdesc: 'Banner Content'
+  search: 'Search'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  content_footer: 'Content Footer'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  botfooternav: 'Bottom Footer Navigation'
+  pagebanner: 'Page Banner'
+
+libraries:
+  - 'cds_wxt/global-styling'
+  - 'wxt_bootstrap/global-styling'
+  - 'wxt_bootstrap/bootstrap-scripts'

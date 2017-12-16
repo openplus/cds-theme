@@ -1,0 +1,395 @@
+// Base global overrides
+// Font Imports
+@include font-face("HKGrotesk", "../fonts/HKGrotesk-Bold",600);
+@include font-face("HKGrotesk", "../fonts/HKGrotesk-BoldItalic", 600, italic);
+@include font-face("HKGrotesk", "../fonts/HKGrotesk-SemiBold",500);
+@include font-face("HKGrotesk", "../fonts/HKGrotesk-SemiBoldItalic",500, italic);
+@include font-face("HKGrotesk", "../fonts/HKGrotesk-Medium",400);
+@include font-face("HKGrotesk", "../fonts/HKGrotesk-MediumItalic",400, italic);
+@include font-face("HKGrotesk", "../fonts/HKGrotesk-Regular",300);
+@include font-face("HKGrotesk", "../fonts/HKGrotesk-Light",100);
+@include font-face("HKGrotesk", "../fonts/HKGrotesk-LightItalic",100, italic);
+
+a,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ol,
+p,
+ul {
+	font-family: "HKGrotesk", sans-serif !important;
+}
+
+body {
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+a {
+	color: $secondary-color;
+	font-weight: 400;
+	text-decoration: none;
+
+	&:visited {
+		color: $secondary-color;
+	}
+
+	&:hover {
+		text-decoration: underline;
+		color: $black;
+	}
+
+	&:hover:not[class] {
+		text-decoration: none;
+		border-bottom: $secondary-color 1px solid;
+	}
+}
+
+.margin-left-medium {
+	margin-right: 15px;
+}
+
+.find-an-advisor-block {
+	border-top: 1px solid #333;
+}
+
+.float-left {
+	float: left;
+}
+
+main.main-container {
+	ol,
+	p,
+	ul {
+		font-weight: 400;
+		font-size: 1.75rem;
+		position: relative;
+		@include tablet {
+			font-size: 2rem;
+		}
+		@include tv {
+			font-size: 2.25rem;
+			line-height: 3.5rem;
+			margin-bottom: 2.75rem;
+		}
+
+		&.lead {
+			font-size: 2.25rem;
+			color: $secondary-color;
+			@include tablet {
+				font-size: 2.5rem;
+				line-height: 1.35em;
+			}
+			@include desktop {
+				font-size: 3rem;
+				font-weight: 400;
+				//line-height : 4.5rem;
+			}
+			@include tv {
+				font-size: 3.5rem;
+			}
+		}
+	}
+}
+
+.h1,
+h1 {
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+	border-bottom: none;
+	margin-top: 2rem;
+	color: $black;
+	font-size: 3rem;
+	line-height: 1.2em;
+	@include mobile_only {
+		margin: 1.5rem;
+	}
+	@include tablet {
+		margin-top: 0.5rem;
+		font-size: 4rem;
+		//line-height: 8rem;
+	}
+	@include desktop {
+		font-size: 5rem;
+		//line-height: 9rem;
+	}
+	@include tv {
+		margin-top: 1.5rem;
+		font-size: 6rem;
+		//line-height: 10rem;
+	}
+
+	.path-frontpage & {
+		color: $white;
+	}
+}
+
+h2 {
+	font-weight: 500;
+	@include desktop {
+		font-size: 2.75rem;
+		margin: 4.75rem 0 0.5rem;
+	}
+}
+
+h3 {
+	font-weight: 400;
+	@include tablet {
+		font-size: 3.5rem;
+	}
+	@include desktop {
+		font-size: 2.5rem;
+	}
+}
+
+.section {
+	padding: 2.5rem 0;
+	position: relative;
+	z-index: 0;
+}
+
+.section--title {
+	font-size: 3rem;
+	font-weight: 400;
+	position: relative;
+	margin: 1.5rem 0 3.5rem;
+	padding: 0;
+	text-align: center;
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 3px;
+		background: $primary-color;
+		bottom: -1.5rem;
+		width: 5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		@include desktop {
+			width: 10%;
+			bottom: -2rem;
+		}
+	}
+	@include tablet {
+		font-size: 3.5rem;
+	}
+	@include desktop {
+		font-size: 5rem;
+		margin-bottom: 4rem;
+	}
+}
+
+.facebook-button a,
+.instagram-button a,
+.twitter-button a {
+	position: relative;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.3333333;
+	border-radius: 6px;
+	padding-left: 61px;
+
+	.fa {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		line-height: 45px;
+		width: 45px;
+		font-size: 1.8em;
+		border-right: 1px solid rgba($white, .5);
+	}
+}
+
+.twitter-button a {
+	background: $twitter;
+	color: $white;
+
+	&:hover {
+		background: darken($twitter, 10);
+	}
+}
+
+.facebook-button a {
+	background: $facebook;
+	color: $white;
+
+	&:hover {
+		background: darken($facebook, 10);
+	}
+}
+
+.instagram-button a {
+	background: $instagram;
+	color: $white;
+
+	&:hover {
+		background: darken($instagram, 10);
+	}
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.select-wrapper:after {
+	display: none !important;
+}
+
+.more-link {
+	text-align: center;
+
+	a {
+		position: relative;
+		display: inline-block;
+		font-weight: 400;
+		padding: 1rem 1.5rem;
+		border: $primary-color 2px solid;
+		border-radius: 1rem;
+		background: $primary-color;
+		transition: all 0.3s ease-in-out;
+		color: $secondary-color;
+		margin: 2rem 0;
+		font-size: 1.75rem;
+
+		&:hover {
+			border-color: $secondary-color;
+			background: $secondary-color;
+			color: $primary-color;
+		}
+	}
+}
+
+button {
+	&.button--primary {
+		position: relative;
+		display: inline-block;
+		font-weight: 400;
+		padding: 1rem 1.5rem;
+		border: $primary-color 2px solid;
+		border-radius: 1rem;
+		background: $primary-color;
+		transition: all 0.3s ease-in-out;
+		color: $secondary-color;
+		margin: 2rem 0;
+		font-size: 1.75rem;
+
+		&:hover {
+			border-color: $secondary-color;
+			background: $secondary-color;
+			color: $primary-color;
+		}
+	}
+}
+
+input.form-control,
+textarea.form-control {
+	width: 90%;
+	max-width: 45rem;
+	border-radius: 0;
+	border: #C40C0C 2px solid;
+	font-weight: 400;
+	font-size: 2rem;
+}
+
+blockquote {
+	font-size: 2.25rem;
+	line-height: 3.5rem;
+	margin-bottom: 2.75rem;
+	border-left: 1px solid $primary-color;
+	padding: 3rem;
+
+	.path-frontpage & {
+		border-color: $white;
+	}
+}
+
+.views-view-grid {
+	.col {
+		@include mobile_only {
+			clear: both;
+		}
+		@include tablet {
+			&:nth-child(2n+3) {
+				clear: both;
+			}
+		}
+		@include desktop {
+			&:nth-child(2n+3) {
+				clear: none;
+			}
+
+			&:nth-child(4n+5) {
+				clear: both;
+			}
+		}
+		@include tv {
+			&:nth-child(2n+3) {
+				clear: none;
+			}
+
+			&:nth-child(4n+5) {
+				clear: none;
+			}
+
+			&:nth-child(6n+7) {
+				clear: both;
+			}
+		}
+	}
+
+	&#views-bootstrap-sectors-block-1 {
+		.col {
+			@include mobile_only {
+				clear: both;
+			}
+			@include tablet {
+				&:nth-child(2n+3) {
+					clear: both;
+				}
+			}
+			@include desktop {
+				&:nth-child(2n+3) {
+					clear: none;
+				}
+
+				&:nth-child(4n+5) {
+					clear: both;
+				}
+			}
+			@include tv {
+				&:nth-child(2n+3) {
+					clear: none;
+				}
+
+				&:nth-child(4n+5) {
+					clear: both;
+				}
+			}
+		}
+	}
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+	background: $primary-color;
+	border-color: $primary-color;
+}

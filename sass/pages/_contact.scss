@@ -1,0 +1,38 @@
+.contact-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+  max-width: none;
+  display: inline-block;
+  @include mobile_only {
+    margin: 0 2rem;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 0 0 2rem;
+  }
+
+  span.fa {
+    padding: 1.3rem;
+    border: $primary-color 2px solid;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-icon {
+    display: inline-block;
+  }
+
+  .text {
+    display: inline-block;
+    margin-left: 1.5rem;
+    font-size: 2rem;
+  }
+}

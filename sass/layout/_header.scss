@@ -1,0 +1,1001 @@
+// Header layout overrides
+
+.fip-logo {
+  font-size: 36px;
+  margin-top: -10px;
+  position: relative;
+  display: block;
+  color: $black !important;
+
+  .logo {
+    height: 1.5rem;
+    margin-top: 2rem;
+    @include tablet {
+      height: 2rem;
+    }
+  }
+
+  .path-frontpage & {
+    color: $white !important;
+    @include tablet {
+      margin-top: 4px;
+      font-size: 2.2rem;
+    }
+    @include desktop {
+      margin-top: 2px;
+      font-size: 24px;
+    }
+    @include tv {
+      font-size: 36px;
+      margin-top: -8px;
+    }
+  }
+  @include mobile_only {
+    font-size: 22px;
+    margin-top: 2px;
+  }
+  @include tablet {
+    font-size: 22px;
+    margin-top: 2px;
+  }
+  @include desktop {
+    font-size: 24px;
+    margin-top: 2px;
+  }
+  @include tv {
+    font-size: 36px;
+    margin-top: -8px;
+  }
+}
+
+#wb-srch {
+  padding: 0;
+  display: block;
+  width: auto;
+  margin-top: 5px;
+  margin-left: 20px;
+
+  [placeholder],
+  input[placeholder] {
+    color: $black !important;
+  }
+
+  input {
+    background: transparent;
+    width: auto;
+    padding: 3px 12px;
+    font-size: 16px;
+    min-height: 0;
+    height: auto;
+    display: inline-block;
+    border-color: $white;
+    color: $white;
+  }
+
+  #edit-actions,
+  #edit-actions--2,
+  .form-type-search {
+    display: inline-block;
+  }
+
+  .form-type-search {
+    margin-right: -7px;
+  }
+
+  button {
+    border: 0;
+    padding: 4px 10px;
+    height: auto;
+    font-size: 16px;
+    min-height: 0;
+    width: 36px;
+    background-color: $white;
+    border-color: $white;
+    color: $black;
+  }
+}
+
+#fip {
+  padding: 1.15rem;
+  line-height: 0;
+  position: relative;
+  z-index: 9;
+  background: $black;
+  @include tablet {
+    padding: 1.5rem 2rem;
+  }
+
+  .container {
+    @include mobile_only {
+      padding: 0;
+
+      .row {
+        width: 100%;
+      }
+    }
+  }
+  // Language Selector
+  .region-language-toggle {
+    display: block;
+    text-align: right;
+    width: auto;
+    color: $white;
+    margin-top: 10px;
+    float: right;
+    margin-left: 20px;
+
+    ul {
+      margin: 0;
+    }
+
+    a {
+      display: inline-block;
+      color: $black;
+      display: inline-block;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-top: 0.75rem;
+      text-align: center;
+      text-decoration: none;
+      padding-bottom: 1rem;
+      border-bottom: #000 1px solid;
+      transition: all 0.3s ease-in-out;
+
+      .path-frontpage & {
+        color: $white;
+      }
+
+      &:hover {
+        border-bottom: #CCC 1px solid;
+      }
+      @include desktop {
+        font-weight: 400;
+        font-size: 2rem;
+      }
+      @include tablet {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+//
+// TOP PAGE BANNER
+//
+////////////////////////////////////////////////////////////
+
+.page-banner {
+  background-color: $dark-grey;
+  background-size: cover;
+  background-position: center center;
+  height: 12rem;
+  position: relative;
+  @include tablet {
+    height: 30rem;
+  }
+  @include desktop {
+    height: 40rem;
+  }
+
+  h1 {
+    border-bottom: none;
+    color: $white;
+    font-family: "HKGrotesk", sans-serif;
+    font-weight: 400;
+    margin: 1.5rem;
+    padding: 0;
+    @include tablet {
+      font-size: 4rem;
+      line-height: 4.25rem;
+      margin-top: 0.5rem;
+    }
+    @include desktop {
+      font-size: 4.5rem;
+      line-height: 5rem;
+    }
+    @include tv {
+      font-size: 4.75rem;
+      line-height: 5.5rem;
+      margin-top: 0.25rem;
+    }
+  }
+  // Page Banner for Front Page
+  .path-frontpage & {
+    background: $dark-grey;
+    clear: both;
+    display: block;
+    height: 40rem;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    @include tablet {
+      height: 45rem;
+      min-height: 450px;
+
+      .page-banner--tag-line .page--banner--content h2 {
+        font-size: 32px;
+      }
+    }
+    @include desktop {
+      height: 50rem;
+      min-height: 450px;
+
+      .page-banner--tag-line .page--banner--content h2 {
+        font-size: 32px;
+      }
+    }
+    @include tv {
+      height: 70rem;
+      min-height: 450px;
+
+      .page-banner--tag-line .page--banner--content h2 {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+.page-banner--video {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  video {
+    height: auto;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: auto;
+    z-index: 0;
+  }
+}
+
+.page-banner--scrim {
+  background: rgba(0,0,0,0.65);
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.page-banner--tag-line {
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+  top: auto;
+  @include mobile_only {
+    bottom: 50px;
+    padding: 15px;
+    left: 15px;
+  }
+
+  .page--banner--content {
+    color: $white;
+    padding-right: 40%;
+
+    h2 {
+      font-size: 48px;
+    }
+    @include mobile_only {
+      padding-right: 0;
+
+      h2 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  // @include tablet {
+  //   margin-top: 25rem;
+  //   text-align: left;
+  //   top: 10%;
+  // }
+  // @include desktop {
+  //   left: 50%;
+  //   margin-top: 23rem;
+  //   top: 15%;
+  //   transform: translateX(-50%);
+  // }
+  // @include tv {
+  //   margin-top: 35rem;
+  //   top: 20%;
+  // }
+  .h1 {
+    border-bottom: none !important;
+    line-height: 1.25em;
+    @include mobile_only {
+      margin: 0;
+      padding: 1.25rem;
+    }
+    @include tablet {
+      font-size: 3rem;
+    }
+    @include desktop {
+      font-size: 3.75rem;
+      line-height: 1.35;
+    }
+  }
+}
+
+.page-banner--tag-line--logo-container {
+  img {
+    width: 100%;
+    margin-top: -40px;
+  }
+  @include mobile_only {
+    a {
+      margin: 0 auto;
+      float: none !important;
+    }
+
+    img {
+      height: 14rem;
+      width: auto;
+      margin-top: 0;
+    }
+  }
+  @include tablet {
+    text-align: right;
+  }
+}
+
+.page-banner--tag-line--logo {
+  height: 12rem;
+  @include desktop {
+    height: 16rem;
+  }
+}
+
+.page-banner--title {
+  color: $white;
+  display: block;
+  font-size: 3rem;
+  font-weight: 400;
+  left: 50%;
+  line-height: 3rem;
+  max-width: 1024px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 0 0 2px $dark-grey;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  width: 100%;
+  //@include tablet {
+  //  font-size   : 10rem;
+  //  line-height : 10rem;
+  //}
+  h1 {
+    border-bottom: none;
+    color: $white;
+    font-weight: 400;
+    margin: 1.5rem;
+    padding: 0;
+    text-shadow: 0 0 10px $black;
+    @include tablet {
+      font-size: 2.5em;
+      line-height: 1.25em;
+      margin-top: 0.5rem;
+    }
+    @include desktop {
+      font-size: 3em;
+    }
+    @include tv {
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+.main-logo a.logo {
+  img {
+    height: 100px;
+  }
+}
+//Breadcrumb
+
+#wb-bc {
+  background: $white;
+}
+
+.navbar-default {
+  background: $white;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  background: transparent;
+}
+
+.navbar-nav {
+  clear: both;
+  float: right;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+
+  .sticky & {
+    margin-top: 3rem;
+
+    li {
+      a,
+      a:visited {
+        color: $black;
+      }
+    }
+  }
+  @include mobile_only {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    .path-frontpage & {
+      left: 0;
+      top: 10rem;
+      transform: translateX(0) translateY(0);
+    }
+  }
+  // Main Navigation Link
+  li {
+    display: block;
+    text-align: center;
+    @include mobile_only {
+      margin: 2rem 0;
+    }
+    @include tablet {
+      display: inline-block;
+      position: relative;
+      // Hide 'Home' Link for tablet and above
+    }
+    // Link Styles
+    a,
+    a:visited {
+      color: $black !important;
+      font-size: 3.5rem;
+      font-weight: 100;
+      margin: 1.5rem;
+      text-decoration: none;
+      position: relative;
+      padding: 0;
+
+      .path-frontpage & {
+        color: $white !important;
+      }
+      @include mobile_only {
+        font-size: 1.5rem;
+      }
+      @include tablet {
+        color: $secondary-color;
+        font-size: 2rem;
+        margin: 0 0.25rem 0.25rem;
+      }
+      @include desktop {
+        font-size: 2.5rem;
+        margin: 0 1.25rem 0.25rem;
+      }
+
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        border: $primary-color 0 solid;
+        width: 0;
+        height: 4px;
+        bottom: -0.5rem;
+        transition: all 0.45s ease-in-out;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:hover::after {
+        @include tablet {
+          width: 100%;
+          border-width: 1px;
+        }
+      }
+    }
+    // Style for when link is active
+    &.active a::after {
+      background: $primary-color;
+      border: $primary-color 1px solid;
+      width: 100%;
+    }
+    // Align nav to edge of document margin for tablet and up
+    &:last-child a {
+      @include tablet {
+        margin-right: 0;
+      }
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+//
+//  CDS MAIN TOP BAR
+//
+////////////////////////////////////////////////////////////
+
+.topbar {
+  padding: 2rem 1rem 1rem;
+  z-index: 999;
+  @include mobile_only {
+    padding: 1rem;
+  }
+
+  .nav-container {
+    @include tablet {
+      .sticky & {
+        padding-right: 1.5rem;
+      }
+    }
+  }
+  // TOPBAR SPECIFIC STYLE FOR HOMEPAGE
+  .path-frontpage & {
+    @include tablet {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 6rem;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.region-language-toggle {
+  text-align: right;
+
+  h2 {
+    display: none;
+  }
+
+  a,
+  a:visited {
+    color: $black;
+
+    .path-frontpage & {
+      color: $white;
+    }
+  }
+}
+
+.path-frontpage .sticky .topbar .logo {
+  display: block !important;
+}
+////////////////////////////////////////////////////////////
+//
+// TOP NAVIGATION
+//
+////////////////////////////////////////////////////////////
+
+.top-nav {
+  clear: both;
+  float: right;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  @include mobile_only {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  // FRONT PAGE SPECIFIC STYLES FOR TOP NAV
+  .path-frontpage & {
+    @include tablet {
+      clear: none;
+    }
+
+    a {
+      color: $white;
+      @include tablet {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+// Main Navigation Link
+
+.top-nav--link {
+  display: block;
+  text-align: center;
+  @include mobile_only {
+    margin: 2rem 0;
+  }
+  @include tablet {
+    display: inline-block;
+    position: relative;
+    // Hide 'Home' Link for tablet and above
+    &:first-child {
+      display: none;
+    }
+  }
+  @include desktop {
+    margin: 0 1rem;
+  }
+  // Link Styles
+  a {
+    color: $white;
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin: 1.5rem;
+    text-decoration: none;
+    position: relative;
+    @include tablet {
+      color: $secondary-color;
+      font-size: 1.5rem;
+      margin: 0 1.25rem 0.25rem;
+
+      .fr & {
+        font-size: 1.85rem;
+      }
+    }
+    @include desktop {
+      font-size: 2rem;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      border: $primary-color 0 solid;
+      width: 0;
+      height: 4px;
+      bottom: -0.5rem;
+      transition: all 0.45s ease-in-out;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:hover::after {
+      @include tablet {
+        width: 100%;
+        border-width: 1px;
+      }
+    }
+
+    .sticky & {
+      @include tablet {
+        font-weight: 400;
+        color: $dark-grey;
+      }
+    }
+  }
+  // Style for when link is active
+  &.active a::after {
+    background: $primary-color;
+    border: $primary-color 1px solid;
+    width: 100%;
+  }
+  // Align nav to edge of document margin for tablet and up
+  &:last-child a {
+    @include tablet {
+      margin-right: 0;
+    }
+  }
+  // When blogpost, always have blog menu item active
+  .page-blogpost &:nth-child(4) a {
+    border-bottom: $primary-color 4px solid;
+  }
+}
+////////////////////////////////////////////////////////////
+//
+// MOBILE NAVIGATION WRAPPER
+//
+////////////////////////////////////////////////////////////
+
+#js-mobileNav {
+  display: none;
+  position: relative;
+  -webkit-backface-visibility: none;
+  @include tablet {
+    display: block;
+  }
+  @include mobile_only {
+    .navbar-nav {
+      position: relative;
+      top: auto;
+      transform: none;
+      left: auto;
+    }
+
+    .invest-search {
+      input {
+        border-color: $white;
+        color: $white !important;
+        width: 200px;
+      }
+
+      button {
+        background: $white;
+        color: $black;
+      }
+    }
+  }
+
+  &.active {
+    display: block;
+    position: fixed;
+    background: rgba(0,0,0,0.9);
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: $white !important;
+    animation: fadeIn 0.3s ease-in-out forwards;
+    padding-top: 100px;
+
+    a {
+      color: $white !important;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
+
+    #fip {
+      .container {
+        .row {
+          width: auto;
+        }
+      }
+
+      .pull-right {
+        float: none !important;
+        text-align: center !important;
+        display: block !important;
+      }
+
+      .region-language-toggle {
+        text-align: center;
+
+        #block-investhub-languageswitcher {
+          float: none;
+        }
+      }
+    }
+    @include mobile_only {
+      .path-frontpage & {
+        height: 100vh;
+
+        .top-nav {
+          left: 0;
+          top: 10rem;
+          transform: translateX(0) translateY(0);
+        }
+      }
+    }
+
+    & > main {
+      z-index: -1;
+    }
+  }
+
+  &.hiding {
+    animation: fadeOut 0.3s ease-in-out !important;
+    animation-fill-mode: forwards;
+  }
+
+  #js-mobileNav--button {
+    background: none;
+    color: $white;
+    border: none;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    padding: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    .text {
+      float: left;
+      text-align: right;
+      font-size: 1.25rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding: 1rem 1rem 0 0;
+    }
+
+    .close-icon {
+      float: right;
+      font-size: 2rem;
+      border: $white 1px solid;
+      padding: 0.5rem;
+      border-radius: 50%;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+//
+// MOBILE NAVIGATION BUTTON (FOR TOP BAR)
+//
+////////////////////////////////////////////////////////////
+
+.main-nav-button {
+  display: inline;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  float: right;
+  margin-top: -10px;
+  z-index: 1;
+
+  &:focus {
+    outline: none;
+  }
+
+  .glyphicon {
+    margin: 0;
+  }
+
+  .path-frontpage & {
+    color: $white;
+  }
+
+  .sticky & {
+    color: $dark-grey;
+    margin-top: 0;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.main-nav-button--text {
+  display: inline-block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+
+.main-nav-button--button {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 1.25rem;
+}
+////////////////////////////////////////////////////////////
+//
+// CDS TOPBAR
+//
+////////////////////////////////////////////////////////////
+
+.cds-menu.sticky {
+  animation: menuDown 0.3s ease-in-out;
+  background: rgba($white, 0.9);
+  box-shadow: 0 0 3px rgba(0,0,0,0.25);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  .fip-logo {
+    margin-top: 22px;
+    @include mobile_only {
+      margin-left: 15px;
+      margin-top: 10px;
+    }
+    @include desktop {
+      margin-top: 32px;
+    }
+    @include tv {
+      margin-top: 22px;
+    }
+  }
+
+  .path-frontpage & .topbar {
+    position: relative;
+    transform: translateX(0%);
+    left: 0;
+  }
+
+  .topbar {
+    top: 0 !important;
+    @include tablet {
+      padding: 0.5rem 0;
+      margin: 0;
+      width: 100%;
+    }
+    @include desktop {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+  }
+
+  #js-mobileNav {
+    @include desktop {
+      margin-top: 1rem;
+    }
+  }
+  // Adjust page banner margin to avoid page jumping
+  & + .page-banner {
+    margin-top: 7rem;
+    @include tablet {
+      margin-top: 10rem;
+    }
+    @include desktop {
+      margin-top: 11rem;
+    }
+  }
+}
+// Animations
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    display: none !important;
+    opacity: 0;
+  }
+}
+@keyframes menuDown {
+  0% {
+    top: -10rem;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.page-top-banner {
+  background: #333;
+  color: $white;
+  text-align: center;
+  padding: 10px 0;
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.mobile-lang-search {
+  text-align: center;
+
+  .region-language-toggle {
+    text-align: center;
+  }
+}

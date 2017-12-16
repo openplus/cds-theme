@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * cds_wxt Council sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+
+ function cds_wxt_preprocess_html(&$variables) {
+   // Add node id to the body class.
+   $node = \Drupal::routeMatch()->getParameter('node');
+   if($node) {
+     $title = $node->get('title')->value;
+     $title = strtolower($title);
+     $title = preg_replace("/[^a-z0-9_\s-]/", "", $title);
+     $title = preg_replace("/[\s-]+/", " ", $title);
+     $title = preg_replace("/[\s_]/", "-", $title);
+     $variables['attributes']['class'][] = 'node-' . $title;
+   }
+ }
+
+ function cds_wxt_preprocess_page(array &$variables) {
+
+   // Load the site name out of configuration.
+   $config = \Drupal::config('system.site');
+   $variables['site_name'] = $config->get('name');
+   $variables['site_slogan'] = $config->get('slogan');
+
+ }

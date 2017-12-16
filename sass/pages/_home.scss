@@ -1,0 +1,109 @@
+// Video Controls
+
+.video-banner--control-button {
+  color: $white !important;
+  font-size: 1.25rem;
+  position: absolute;
+  left: 0.5rem;
+  bottom: 1rem;
+  text-decoration: none !important;
+  z-index: 99;
+  @include mobile_only {
+    left: 25px;
+  }
+  @include desktop {
+    bottom: 1.5rem;
+    left: 1rem;
+  }
+
+  .pause-ico {
+    border: $white 2px solid;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.4rem;
+    padding: 0.75rem;
+    @include desktop {
+      margin-right: 0.75rem;
+    }
+
+    &.fa-play {
+      padding: 0.75rem 0.8rem;
+    }
+  }
+}
+
+.path-frontpage {
+  #wb-cont p {
+    @include mobile_only {
+      font-size: 2.25rem;
+    }
+  }
+
+  header.navbar-default {
+    background: transparent;
+    z-index: 9;
+
+    li {
+      a,
+      a:visited {
+        color: $white !important;
+      }
+    }
+
+    .sticky .navbar-nav li a,
+    .sticky .navbar-nav li a:visited {
+      color: $black !important;
+    }
+  }
+
+  .home-header {
+    clear: both;
+    display: block;
+    height: 40rem;
+    position: relative;
+    width: 100%;
+    margin-top: -116px;
+    z-index: 0;
+    @include tablet {
+      height: 45rem;
+    }
+    @include desktop {
+      height: calc(100vh - 61px);
+    }
+
+    .block-region-header {
+      display: block;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+
+      video {
+        min-height: 100%;
+        min-width: 100%;
+        position: absolute;
+        z-index: 0;
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+  }
+
+  .topbar .sticky .logo {
+    display: block;
+  }
+}
+
+.page-banner--scrim {
+  background: rgba(0, 0, 0, 0.65);
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.path-frontpage .cds-menu.sticky .fip-logo {
+  color: $black !important;
+}

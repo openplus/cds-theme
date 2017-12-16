@@ -1,0 +1,166 @@
+// Footer layout overrides
+// Canada Footer
+
+.brand {
+  border-top: 4px solid $secondary-color;
+  max-height: 10rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: $light-grey;
+
+  nav {
+    padding: 0.5rem 0 0 !important;
+  }
+}
+
+footer#wb-info {
+  .path-frontpage & {
+    margin-top: 0;
+  }
+
+  nav {
+    @include mobile_only {
+      text-align: center;
+    }
+  }
+}
+
+.goc-footer--links {
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    @include tablet {
+      text-align: left;
+    }
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.7em 0 0.7em 0.7em;
+
+    &::after {
+      content: "\2022";
+      margin-left: 0.7em;
+      color: $dark-grey;
+    }
+
+    &:last-child {
+      &::after {
+        content: '';
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.goc-footer--logo {
+  text-align: center;
+  @include tablet {
+    text-align: right;
+  }
+
+  img,
+  object {
+    height: 40px;
+  }
+}
+
+.social {
+  text-align: center;
+  background: #333;
+  color: $white;
+  border: none;
+  margin-top: 30px;
+  padding: 20px 0;
+
+  .path-frontpage &,
+  .path-industries & {
+    margin-top: 0;
+  }
+
+  a {
+    color: $white;
+  }
+
+  h2 {
+    display: inline-block;
+    margin-top: 0;
+  }
+}
+
+.midfooter {
+  padding: 0 0 4.75rem;
+  background: $white;
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  .path-frontpage & {
+    margin-top: 0;
+  }
+}
+
+.copyright {
+  margin-top: 20px;
+}
+
+.tofpg {
+  padding-top: 30px;
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+.wet-boew-footnotes dl dd p.footnote-return {
+  top: 0;
+  margin: 0;
+  padding-top: 0.375em;
+  padding-right: 0;
+  position: absolute;
+  width: 2.75em;
+  overflow: hidden;
+}
+
+.wet-boew-footnotes dl dt {
+  position: absolute;
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.wet-boew-footnotes dl dd {
+  position: relative;
+  margin: 0.375em 0;
+  border: 1px solid transparent;
+}
+
+.wet-boew-footnotes dl dd p:first-child {
+  padding-top: 0.375em;
+}
+
+.wet-boew-footnotes dl dd p {
+  margin: 0 0 0 3.125em;
+  padding: 0 0.375em 0.375em;
+}
+
+.goc-footer--links li {
+  border-right: 1px solid #232323;
+  padding: 0;
+  margin: 0.7em 0 0.7em 0.7em;
+  padding-right: 0.7em;
+  line-height: 1em;
+
+  &::after {
+    display: none;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}
